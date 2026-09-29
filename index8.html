@@ -1,0 +1,2290 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SHINDEN | Streetwear & Oversize</title>
+
+    <!-- BOOTSTRAP 5 -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- BOOTSTRAP ICONS -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+
+<style>
+
+/* =========================================
+   GENERAL
+========================================= */
+
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #0b0b0b;
+    color: white;
+}
+
+section {
+    padding: 90px 0;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+    background: rgba(5,5,5,.96);
+    backdrop-filter: blur(10px);
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    font-size: 1.7rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.navbar-brand span {
+    color: #ff3c00;
+}
+
+.nav-link {
+    color: #ddd !important;
+    font-weight: 600;
+    margin: 0 8px;
+}
+
+.nav-link:hover {
+    color: #ff3c00 !important;
+}
+
+.navbar-toggler {
+    border-color: #555;
+}
+
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    min-height: 92vh;
+
+    display: flex;
+    align-items: center;
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(0,0,0,.95),
+        rgba(0,0,0,.55),
+        rgba(0,0,0,.2)
+    ),
+    url("https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1800&q=85")
+    center/cover no-repeat;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero h1 {
+    font-size: clamp(3rem,7vw,6rem);
+    font-weight: 900;
+    line-height: .95;
+}
+
+.hero h1 span {
+    color: #ff3c00;
+}
+
+.hero p {
+    color: #ddd;
+    font-size: 1.1rem;
+    margin-top: 25px;
+}
+
+.badge-style {
+    background: #ff3c00;
+    color: white;
+    padding: 7px 14px;
+    border-radius: 30px;
+    font-size: .75rem;
+    font-weight: 800;
+}
+
+
+/* =========================================
+   BOTONES
+========================================= */
+
+.btn-main {
+    background: #ff3c00;
+    border: none;
+    color: white;
+    font-weight: 800;
+    padding: 13px 27px;
+    border-radius: 50px;
+    transition: .3s;
+}
+
+.btn-main:hover {
+    background: white;
+    color: black;
+    transform: translateY(-3px);
+}
+
+
+/* =========================================
+   TITULOS
+========================================= */
+
+.section-title {
+    font-size: 2.6rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.section-title span {
+    color: #ff3c00;
+}
+
+.section-subtitle {
+    color: #999;
+    max-width: 650px;
+    margin: 0 auto 50px;
+}
+
+
+/* =========================================
+   PRODUCTOS
+========================================= */
+
+.product-card {
+    background: #151515;
+    border: 1px solid #252525;
+    border-radius: 18px;
+    overflow: hidden;
+    height: 100%;
+    transition: .3s;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    border-color: #ff3c00;
+}
+
+.product-img {
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 22px;
+}
+
+.product-info h5 {
+    font-weight: 800;
+}
+
+.price {
+    color: #ff3c00;
+    font-size: 1.3rem;
+    font-weight: 800;
+}
+
+
+/* =========================================
+   CARRUSEL
+========================================= */
+
+.carousel-item img {
+    height: 560px;
+    object-fit: cover;
+    filter: brightness(.6);
+}
+
+.carousel-caption {
+    bottom: 25%;
+}
+
+.carousel-caption h3 {
+    font-size: 2.5rem;
+    font-weight: 900;
+}
+
+
+/* =========================================
+   CONTACTO
+========================================= */
+
+.contact-box {
+    background: #151515;
+    border: 1px solid #252525;
+    border-radius: 20px;
+    padding: 40px;
+}
+
+.form-control {
+    background: #0d0d0d;
+    color: white;
+    border: 1px solid #333;
+    padding: 13px;
+}
+
+.form-control:focus {
+    background: #111;
+    color: white;
+    border-color: #ff3c00;
+    box-shadow: none;
+}
+
+
+/* =========================================
+   FAQ
+========================================= */
+
+.accordion-item {
+    background: #151515;
+    border: 1px solid #292929;
+    margin-bottom: 10px;
+}
+
+.accordion-button {
+    background: #151515;
+    color: white;
+    font-weight: 700;
+}
+
+.accordion-button:not(.collapsed) {
+    background: #ff3c00;
+    color: white;
+}
+
+.accordion-body {
+    background: #111;
+    color: #ccc;
+}
+
+
+/* =========================================
+   MODALES
+========================================= */
+
+.modal-content {
+    background: #151515;
+    color: white;
+    border: 1px solid #333;
+    border-radius: 20px;
+}
+
+.modal-header,
+.modal-footer {
+    border-color: #333;
+}
+
+.btn-close {
+    filter: invert(1);
+}
+
+
+/* =========================================
+   CARRITO
+========================================= */
+
+.cart-item {
+    background: #101010;
+    border: 1px solid #292929;
+    border-radius: 12px;
+    padding: 12px;
+    margin-bottom: 12px;
+}
+
+.cart-item img {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.cart-total {
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.discount {
+    color: #4ade80;
+}
+
+.balance {
+    color: #4ade80;
+    font-weight: 800;
+}
+
+
+/* =========================================
+   SALDO
+========================================= */
+
+.balance-card {
+    background: linear-gradient(
+        135deg,
+        #171717,
+        #242424
+    );
+
+    border: 1px solid #333;
+    border-radius: 18px;
+    padding: 20px;
+}
+
+.balance-card small {
+    color: #999;
+}
+
+.balance-amount {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #4ade80;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    background: #050505;
+    border-top: 1px solid #222;
+    padding: 60px 0 20px;
+}
+
+.footer-title {
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+.footer-title span {
+    color: #ff3c00;
+}
+
+footer p {
+    color: #999;
+}
+
+.footer-links a {
+    display: block;
+    color: #aaa;
+    text-decoration: none;
+    margin-bottom: 9px;
+}
+
+.footer-links a:hover {
+    color: #ff3c00;
+}
+
+.social-icons a {
+    display: inline-flex;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    background: #151515;
+    color: white;
+    margin-right: 8px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    background: #ff3c00;
+}
+
+.copyright {
+    border-top: 1px solid #222;
+    margin-top: 40px;
+    padding-top: 20px;
+    text-align: center;
+    color: #666;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media(max-width:768px) {
+
+    .hero {
+        min-height: 85vh;
+    }
+
+    .hero h1 {
+        font-size: 3.2rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .carousel-item img {
+        height: 400px;
+    }
+
+    .contact-box {
+        padding: 25px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     NAVBAR
+========================================= -->
+
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+
+<div class="container">
+
+<a class="navbar-brand" href="#inicio">
+    SHIN<span>DEN</span>
+</a>
+
+
+<button
+class="navbar-toggler"
+type="button"
+data-bs-toggle="collapse"
+data-bs-target="#menu">
+
+<span class="navbar-toggler-icon"></span>
+
+</button>
+
+
+<div class="collapse navbar-collapse" id="menu">
+
+<ul class="navbar-nav ms-auto align-items-lg-center">
+
+<li class="nav-item">
+<a class="nav-link" href="#inicio">
+Inicio
+</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#productos">
+Productos
+</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#estilos">
+Estilos
+</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#faq">
+FAQ
+</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#contacto">
+Contacto
+</a>
+</li>
+
+</ul>
+
+
+<!-- SALDO -->
+
+<button
+class="btn btn-outline-success ms-lg-3 mt-3 mt-lg-0"
+data-bs-toggle="modal"
+data-bs-target="#saldoModal">
+
+<i class="bi bi-wallet2"></i>
+
+S/ <span id="navbarBalance">0.00</span>
+
+</button>
+
+
+<!-- CARRITO -->
+
+<button
+class="btn btn-main ms-lg-2 mt-3 mt-lg-0"
+data-bs-toggle="modal"
+data-bs-target="#cartModal">
+
+<i class="bi bi-cart3"></i>
+
+Carrito
+
+<span
+id="cartCount"
+class="badge bg-light text-dark">
+
+0
+
+</span>
+
+</button>
+
+</div>
+
+</div>
+
+</nav>
+
+
+<!-- =========================================
+     HERO
+========================================= -->
+
+<header class="hero" id="inicio">
+
+<div class="container">
+
+<div class="hero-content">
+
+<span class="badge-style">
+NUEVA COLECCIÓN 2026
+</span>
+
+<h1 class="mt-3">
+
+VISTE<br>
+
+<span>DIFERENTE.</span>
+
+</h1>
+
+<p>
+
+Descubre nuestra colección de ropa
+<strong>Oversize, Shinden y Streetwear</strong>.
+
+Diseños urbanos pensados para expresar
+tu personalidad.
+
+</p>
+
+
+<div class="d-flex flex-wrap gap-3 mt-4">
+
+<a
+href="#productos"
+class="btn btn-main">
+
+Ver colección
+
+<i class="bi bi-arrow-right"></i>
+
+</a>
+
+
+<a
+href="#contacto"
+class="btn btn-outline-light rounded-pill">
+
+Contáctanos
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</header>
+
+
+<!-- =========================================
+     PRODUCTOS
+========================================= -->
+
+<section id="productos">
+
+<div class="container">
+
+<div class="text-center">
+
+<h2 class="section-title">
+Nuestra <span>colección</span>
+</h2>
+
+<p class="section-subtitle">
+
+Encuentra prendas modernas,
+cómodas y con diseños urbanos.
+
+</p>
+
+</div>
+
+
+<div class="row g-4">
+
+
+<!-- PRODUCTO 1 -->
+
+<div class="col-md-6 col-lg-3">
+
+<div class="product-card">
+
+<img
+src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=800&q=80"
+class="product-img"
+alt="Hoodie">
+
+<div class="product-info">
+
+<span class="badge-style">
+OVERSIZE
+</span>
+
+<h5 class="mt-3">
+Hoodie Shadow
+</h5>
+
+<p class="text-secondary">
+Hoodie urbano de corte amplio.
+</p>
+
+<div class="d-flex justify-content-between align-items-center">
+
+<span class="price">
+S/ 89.90
+</span>
+
+<button
+class="btn btn-sm btn-main"
+onclick="addToCart(
+'Hoodie Shadow',
+89.90,
+'https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=800&q=80'
+)">
+
+<i class="bi bi-cart-plus"></i>
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCTO 2 -->
+
+<div class="col-md-6 col-lg-3">
+
+<div class="product-card">
+
+<img
+src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80"
+class="product-img"
+alt="Polo">
+
+<div class="product-info">
+
+<span class="badge-style">
+STREETWEAR
+</span>
+
+<h5 class="mt-3">
+Urban Tee
+</h5>
+
+<p class="text-secondary">
+Polo oversize para un look urbano.
+</p>
+
+<div class="d-flex justify-content-between align-items-center">
+
+<span class="price">
+S/ 59.90
+</span>
+
+<button
+class="btn btn-main btn-sm"
+onclick="addToCart(
+'Urban Tee',
+59.90,
+'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80'
+)">
+
+<i class="bi bi-cart-plus"></i>
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCTO 3 -->
+
+<div class="col-md-6 col-lg-3">
+
+<div class="product-card">
+
+<img
+src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80"
+class="product-img"
+alt="Chaqueta">
+
+<div class="product-info">
+
+<span class="badge-style">
+SHINDEN
+</span>
+
+<h5 class="mt-3">
+Dark Jacket
+</h5>
+
+<p class="text-secondary">
+Chaqueta inspirada en moda urbana.
+</p>
+
+<div class="d-flex justify-content-between align-items-center">
+
+<span class="price">
+S/ 119.90
+</span>
+
+<button
+class="btn btn-main btn-sm"
+onclick="addToCart(
+'Dark Jacket',
+119.90,
+'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80'
+)">
+
+<i class="bi bi-cart-plus"></i>
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCTO 4 -->
+
+<div class="col-md-6 col-lg-3">
+
+<div class="product-card">
+
+<img
+src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=80"
+class="product-img"
+alt="Cargo">
+
+<div class="product-info">
+
+<span class="badge-style">
+CARGO
+</span>
+
+<h5 class="mt-3">
+Cargo Black
+</h5>
+
+<p class="text-secondary">
+Pantalón cargo cómodo y resistente.
+</p>
+
+<div class="d-flex justify-content-between align-items-center">
+
+<span class="price">
+S/ 99.90
+</span>
+
+<button
+class="btn btn-main btn-sm"
+onclick="addToCart(
+'Cargo Black',
+99.90,
+'https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=80'
+)">
+
+<i class="bi bi-cart-plus"></i>
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================
+     CARRUSEL
+========================================= -->
+
+<section id="estilos" class="bg-black">
+
+<div class="container">
+
+<div class="text-center">
+
+<h2 class="section-title">
+
+Encuentra tu <span>estilo</span>
+
+</h2>
+
+<p class="section-subtitle">
+
+Explora nuestros diferentes estilos.
+
+</p>
+
+</div>
+
+
+<div
+id="styleCarousel"
+class="carousel slide carousel-fade"
+data-bs-ride="carousel">
+
+
+<div class="carousel-indicators">
+
+<button
+data-bs-target="#styleCarousel"
+data-bs-slide-to="0"
+class="active">
+</button>
+
+<button
+data-bs-target="#styleCarousel"
+data-bs-slide-to="1">
+</button>
+
+<button
+data-bs-target="#styleCarousel"
+data-bs-slide-to="2">
+</button>
+
+</div>
+
+
+<div class="carousel-inner rounded-4 overflow-hidden">
+
+
+<div class="carousel-item active">
+
+<img
+src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1600&q=85"
+class="d-block w-100">
+
+<div class="carousel-caption">
+
+<h3>
+STREETWEAR
+</h3>
+
+<p>
+El estilo urbano nunca pasa de moda.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="carousel-item">
+
+<img
+src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1600&q=85"
+class="d-block w-100">
+
+<div class="carousel-caption">
+
+<h3>
+OVERSIZE
+</h3>
+
+<p>
+Comodidad y personalidad.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="carousel-item">
+
+<img
+src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?auto=format&fit=crop&w=1600&q=85"
+class="d-block w-100">
+
+<div class="carousel-caption">
+
+<h3>
+SHINDEN STYLE
+</h3>
+
+<p>
+Diseños para destacar.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+<button
+class="carousel-control-prev"
+type="button"
+data-bs-target="#styleCarousel"
+data-bs-slide="prev">
+
+<span class="carousel-control-prev-icon"></span>
+
+</button>
+
+
+<button
+class="carousel-control-next"
+type="button"
+data-bs-target="#styleCarousel"
+data-bs-slide="next">
+
+<span class="carousel-control-next-icon"></span>
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================
+     FAQ
+========================================= -->
+
+<section id="faq">
+
+<div class="container">
+
+<div class="text-center">
+
+<h2 class="section-title">
+
+Preguntas <span>frecuentes</span>
+
+</h2>
+
+</div>
+
+
+<div class="accordion" id="faqAccordion">
+
+
+<div class="accordion-item">
+
+<h2 class="accordion-header">
+
+<button
+class="accordion-button"
+data-bs-toggle="collapse"
+data-bs-target="#faq1">
+
+¿Qué significa Oversize?
+
+</button>
+
+</h2>
+
+<div
+id="faq1"
+class="accordion-collapse collapse show"
+data-bs-parent="#faqAccordion">
+
+<div class="accordion-body">
+
+El estilo Oversize utiliza prendas de corte
+amplio y relajado.
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="accordion-item">
+
+<h2 class="accordion-header">
+
+<button
+class="accordion-button collapsed"
+data-bs-toggle="collapse"
+data-bs-target="#faq2">
+
+¿Qué tallas tienen?
+
+</button>
+
+</h2>
+
+<div
+id="faq2"
+class="accordion-collapse collapse"
+data-bs-parent="#faqAccordion">
+
+<div class="accordion-body">
+
+Las tallas dependen de cada producto.
+Puedes consultar disponibilidad antes de comprar.
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="accordion-item">
+
+<h2 class="accordion-header">
+
+<button
+class="accordion-button collapsed"
+data-bs-toggle="collapse"
+data-bs-target="#faq3">
+
+¿Realizan envíos?
+
+</button>
+
+</h2>
+
+<div
+id="faq3"
+class="accordion-collapse collapse"
+data-bs-parent="#faqAccordion">
+
+<div class="accordion-body">
+
+Sí. Realizamos envíos dentro de Lima y
+podemos coordinar envíos a otras ciudades.
+
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================
+     CONTACTO
+========================================= -->
+
+<section id="contacto" class="bg-black">
+
+<div class="container">
+
+<div class="row justify-content-center">
+
+<div class="col-lg-8">
+
+<div class="contact-box">
+
+<div class="text-center mb-4">
+
+<h2 class="section-title">
+
+Contácta<span>nos</span>
+
+</h2>
+
+<p class="text-secondary">
+
+¿Tienes alguna pregunta? Escríbenos.
+
+</p>
+
+</div>
+
+
+<form id="contactForm">
+
+<div class="mb-3">
+
+<label class="form-label">
+Nombre
+</label>
+
+<input
+type="text"
+class="form-control"
+required
+placeholder="Tu nombre">
+
+</div>
+
+
+<div class="mb-3">
+
+<label class="form-label">
+Correo
+</label>
+
+<input
+type="email"
+class="form-control"
+required
+placeholder="correo@gmail.com">
+
+</div>
+
+
+<div class="mb-3">
+
+<label class="form-label">
+Mensaje
+</label>
+
+<textarea
+class="form-control"
+rows="5"
+required
+placeholder="Escribe tu mensaje">
+</textarea>
+
+</div>
+
+
+<button
+class="btn btn-main w-100">
+
+<i class="bi bi-send"></i>
+
+Enviar mensaje
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================
+     MODAL CARRITO
+========================================= -->
+
+<div
+class="modal fade"
+id="cartModal"
+tabindex="-1">
+
+<div class="modal-dialog modal-lg modal-dialog-centered">
+
+<div class="modal-content">
+
+<div class="modal-header">
+
+<h5 class="modal-title">
+
+<i class="bi bi-cart3"></i>
+
+Mi carrito
+
+</h5>
+
+<button
+class="btn-close"
+data-bs-dismiss="modal">
+</button>
+
+</div>
+
+
+<div class="modal-body">
+
+<div id="cartItems">
+
+</div>
+
+
+<!-- PROMOCIÓN -->
+
+<div class="input-group mt-4">
+
+<input
+type="text"
+id="promoInput"
+class="form-control"
+placeholder="Código promocional">
+
+<button
+class="btn btn-main"
+onclick="applyPromo()">
+
+Aplicar
+
+</button>
+
+</div>
+
+<small
+id="promoMessage"
+class="d-block mt-2">
+</small>
+
+
+<!-- TOTAL -->
+
+<div class="cart-total mt-4">
+
+<div class="d-flex justify-content-between">
+
+<span>
+Subtotal
+</span>
+
+<strong>
+S/ <span id="subtotal">0.00</span>
+</strong>
+
+</div>
+
+
+<div class="d-flex justify-content-between">
+
+<span class="discount">
+
+Descuento
+
+</span>
+
+<strong class="discount">
+
+- S/ <span id="discount">0.00</span>
+
+</strong>
+
+</div>
+
+
+<div class="d-flex justify-content-between mt-3 fs-4">
+
+<strong>
+TOTAL
+</strong>
+
+<strong class="price">
+
+S/ <span id="total">0.00</span>
+
+</strong>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="modal-footer">
+
+<button
+class="btn btn-outline-light"
+data-bs-dismiss="modal">
+
+Seguir comprando
+
+</button>
+
+
+<button
+class="btn btn-main"
+onclick="checkout()">
+
+<i class="bi bi-credit-card"></i>
+
+Comprar
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =========================================
+     MODAL SALDO
+========================================= -->
+
+<div
+class="modal fade"
+id="saldoModal"
+tabindex="-1">
+
+<div class="modal-dialog modal-dialog-centered">
+
+<div class="modal-content">
+
+<div class="modal-header">
+
+<h5 class="modal-title">
+
+<i class="bi bi-wallet2"></i>
+
+Mi saldo
+
+</h5>
+
+<button
+class="btn-close"
+data-bs-dismiss="modal">
+</button>
+
+</div>
+
+
+<div class="modal-body">
+
+
+<div class="balance-card text-center mb-4">
+
+<small>
+SALDO ACTUAL
+</small>
+
+<div class="balance-amount">
+
+S/ <span id="modalBalance">
+0.00
+</span>
+
+</div>
+
+</div>
+
+
+<label class="form-label">
+
+¿Cuánto saldo quieres agregar?
+
+</label>
+
+
+<div class="input-group mb-3">
+
+<span class="input-group-text">
+S/
+</span>
+
+<input
+type="number"
+id="saldoInput"
+class="form-control"
+min="1"
+step="0.01"
+placeholder="Ej. 100">
+
+</div>
+
+
+<div class="row g-2">
+
+<div class="col-4">
+
+<button
+class="btn btn-outline-light w-100"
+onclick="setSaldo(20)">
+
+S/ 20
+
+</button>
+
+</div>
+
+<div class="col-4">
+
+<button
+class="btn btn-outline-light w-100"
+onclick="setSaldo(50)">
+
+S/ 50
+
+</button>
+
+</div>
+
+<div class="col-4">
+
+<button
+class="btn btn-outline-light w-100"
+onclick="setSaldo(100)">
+
+S/ 100
+
+</button>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+<div class="modal-footer">
+
+<button
+class="btn btn-main w-100"
+onclick="addBalance()">
+
+<i class="bi bi-plus-circle"></i>
+
+Agregar saldo
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer>
+
+<div class="container">
+
+<div class="row g-4">
+
+
+<div class="col-lg-5">
+
+<h3 class="footer-title">
+
+SHIN<span>DEN</span>
+
+</h3>
+
+<p>
+
+Moda urbana, Oversize y Streetwear
+para quienes quieren vestir diferente.
+
+</p>
+
+<p>
+
+<i class="bi bi-geo-alt-fill"></i>
+
+Lima, Perú
+
+</p>
+
+
+<div class="social-icons">
+
+<a href="#">
+<i class="bi bi-instagram"></i>
+</a>
+
+<a href="#">
+<i class="bi bi-tiktok"></i>
+</a>
+
+<a href="#">
+<i class="bi bi-facebook"></i>
+</a>
+
+<a href="#">
+<i class="bi bi-whatsapp"></i>
+</a>
+
+</div>
+
+</div>
+
+
+<div class="col-lg-3">
+
+<h5>
+Navegación
+</h5>
+
+<div class="footer-links">
+
+<a href="#inicio">
+Inicio
+</a>
+
+<a href="#productos">
+Productos
+</a>
+
+<a href="#estilos">
+Estilos
+</a>
+
+<a href="#faq">
+FAQ
+</a>
+
+<a href="#contacto">
+Contacto
+</a>
+
+</div>
+
+</div>
+
+
+<div class="col-lg-4">
+
+<h5>
+Contacto
+</h5>
+
+<p>
+<i class="bi bi-envelope"></i>
+contacto@shinden.com
+</p>
+
+<p>
+<i class="bi bi-telephone"></i>
++51 999 999 999
+</p>
+
+</div>
+
+
+</div>
+
+
+<div class="copyright">
+
+© 2026 SHINDEN Streetwear.
+Todos los derechos reservados.
+
+</div>
+
+</div>
+
+</footer>
+
+
+<!-- BOOTSTRAP -->
+
+<script
+src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+<script>
+
+/* =========================================
+   VARIABLES
+========================================= */
+
+let cart = JSON.parse(localStorage.getItem("shindenCart")) || [];
+
+let balance =
+parseFloat(localStorage.getItem("shindenBalance")) || 0;
+
+let currentPromo = null;
+
+
+/* =========================================
+   CÓDIGOS PROMOCIONALES
+========================================= */
+
+const promoCodes = {
+
+    "SHINDEN10": 10,
+
+    "STREET15": 15,
+
+    "OVERSIZE20": 20,
+
+    "WELCOME25": 25,
+
+    "DROP30": 30
+
+};
+
+
+/* =========================================
+   AGREGAR PRODUCTO
+========================================= */
+
+function addToCart(name, price, image) {
+
+    const existingProduct =
+    cart.find(product => product.name === name);
+
+    if(existingProduct) {
+
+        existingProduct.quantity++;
+
+    } else {
+
+        cart.push({
+
+            name: name,
+
+            price: price,
+
+            image: image,
+
+            quantity: 1
+
+        });
+
+    }
+
+
+    saveCart();
+
+    updateCart();
+
+    showCartNotification(name);
+
+}
+
+
+/* =========================================
+   GUARDAR CARRITO
+========================================= */
+
+function saveCart() {
+
+    localStorage.setItem(
+        "shindenCart",
+        JSON.stringify(cart)
+    );
+
+}
+
+
+/* =========================================
+   MOSTRAR CARRITO
+========================================= */
+
+function updateCart() {
+
+    const container =
+    document.getElementById("cartItems");
+
+    const count =
+    document.getElementById("cartCount");
+
+
+    container.innerHTML = "";
+
+
+    let totalProducts = 0;
+
+    let subtotal = 0;
+
+
+    if(cart.length === 0) {
+
+        container.innerHTML = `
+
+        <div class="text-center py-5">
+
+            <i
+            class="bi bi-cart-x"
+            style="font-size:4rem;color:#555;">
+            </i>
+
+            <h5 class="mt-3">
+                Tu carrito está vacío
+            </h5>
+
+            <p class="text-secondary">
+                Agrega productos para comenzar.
+            </p>
+
+        </div>
+
+        `;
+
+    }
+
+
+    cart.forEach((product,index) => {
+
+        totalProducts += product.quantity;
+
+        subtotal += product.price * product.quantity;
+
+
+        container.innerHTML += `
+
+        <div class="cart-item">
+
+            <div class="d-flex align-items-center gap-3">
+
+                <img
+                src="${product.image}"
+                alt="${product.name}">
+
+
+                <div class="flex-grow-1">
+
+                    <h6 class="mb-1">
+                        ${product.name}
+                    </h6>
+
+                    <small class="text-secondary">
+
+                        S/ ${product.price.toFixed(2)}
+
+                    </small>
+
+
+                    <div class="mt-2">
+
+                        <button
+                        class="btn btn-sm btn-outline-light"
+                        onclick="changeQuantity(${index},-1)">
+
+                            <i class="bi bi-dash"></i>
+
+                        </button>
+
+
+                        <span class="mx-2">
+
+                            ${product.quantity}
+
+                        </span>
+
+
+                        <button
+                        class="btn btn-sm btn-outline-light"
+                        onclick="changeQuantity(${index},1)">
+
+                            <i class="bi bi-plus"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="text-end">
+
+                    <strong>
+
+                        S/
+                        ${(product.price * product.quantity).toFixed(2)}
+
+                    </strong>
+
+
+                    <br>
+
+
+                    <button
+                    class="btn btn-sm btn-link text-danger"
+                    onclick="removeProduct(${index})">
+
+                        <i class="bi bi-trash"></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        `;
+
+    });
+
+
+    count.textContent = totalProducts;
+
+
+    let discount = 0;
+
+
+    if(currentPromo) {
+
+        discount =
+        subtotal * currentPromo / 100;
+
+    }
+
+
+    let total = subtotal - discount;
+
+
+    document.getElementById("subtotal")
+    .textContent = subtotal.toFixed(2);
+
+
+    document.getElementById("discount")
+    .textContent = discount.toFixed(2);
+
+
+    document.getElementById("total")
+    .textContent = total.toFixed(2);
+
+}
+
+
+/* =========================================
+   CAMBIAR CANTIDAD
+========================================= */
+
+function changeQuantity(index, amount) {
+
+    cart[index].quantity += amount;
+
+
+    if(cart[index].quantity <= 0) {
+
+        cart.splice(index,1);
+
+    }
+
+
+    saveCart();
+
+    updateCart();
+
+}
+
+
+/* =========================================
+   ELIMINAR PRODUCTO
+========================================= */
+
+function removeProduct(index) {
+
+    cart.splice(index,1);
+
+    saveCart();
+
+    updateCart();
+
+}
+
+
+/* =========================================
+   PROMOCIONES
+========================================= */
+
+function applyPromo() {
+
+    const input =
+    document.getElementById("promoInput");
+
+    const message =
+    document.getElementById("promoMessage");
+
+
+    const code =
+    input.value.trim().toUpperCase();
+
+
+    if(promoCodes[code]) {
+
+        currentPromo = promoCodes[code];
+
+
+        message.innerHTML = `
+
+        <span class="text-success">
+
+        <i class="bi bi-check-circle"></i>
+
+        Código aplicado correctamente:
+        ${currentPromo}% de descuento.
+
+        </span>
+
+        `;
+
+        updateCart();
+
+    } else {
+
+        currentPromo = null;
+
+
+        message.innerHTML = `
+
+        <span class="text-danger">
+
+        <i class="bi bi-x-circle"></i>
+
+        Código promocional no válido.
+
+        </span>
+
+        `;
+
+        updateCart();
+
+    }
+
+}
+
+
+/* =========================================
+   SALDO
+========================================= */
+
+function updateBalance() {
+
+    document.getElementById("navbarBalance")
+    .textContent = balance.toFixed(2);
+
+
+    document.getElementById("modalBalance")
+    .textContent = balance.toFixed(2);
+
+}
+
+
+function setSaldo(amount) {
+
+    document.getElementById("saldoInput")
+    .value = amount;
+
+}
+
+
+function addBalance() {
+
+    const input =
+    document.getElementById("saldoInput");
+
+
+    const amount =
+    parseFloat(input.value);
+
+
+    if(!amount || amount <= 0) {
+
+        alert(
+            "Ingresa una cantidad válida."
+        );
+
+        return;
+
+    }
+
+
+    balance += amount;
+
+
+    localStorage.setItem(
+        "shindenBalance",
+        balance
+    );
+
+
+    updateBalance();
+
+
+    input.value = "";
+
+
+    alert(
+        "Se agregaron S/ " +
+        amount.toFixed(2) +
+        " a tu saldo."
+    );
+
+}
+
+
+/* =========================================
+   COMPRAR
+========================================= */
+
+function checkout() {
+
+    if(cart.length === 0) {
+
+        alert(
+            "Tu carrito está vacío."
+        );
+
+        return;
+
+    }
+
+
+    let subtotal = 0;
+
+
+    cart.forEach(product => {
+
+        subtotal +=
+        product.price * product.quantity;
+
+    });
+
+
+    let discount = 0;
+
+
+    if(currentPromo) {
+
+        discount =
+        subtotal * currentPromo / 100;
+
+    }
+
+
+    const total =
+    subtotal - discount;
+
+
+    if(balance < total) {
+
+        alert(
+
+            "Saldo insuficiente.\n\n" +
+
+            "Total: S/ " +
+            total.toFixed(2) +
+
+            "\nSaldo disponible: S/ " +
+            balance.toFixed(2)
+
+        );
+
+        return;
+
+    }
+
+
+    balance -= total;
+
+
+    localStorage.setItem(
+        "shindenBalance",
+        balance
+    );
+
+
+    cart = [];
+
+
+    localStorage.removeItem(
+        "shindenCart"
+    );
+
+
+    currentPromo = null;
+
+
+    document.getElementById("promoInput")
+    .value = "";
+
+
+    document.getElementById("promoMessage")
+    .innerHTML = "";
+
+
+    updateBalance();
+
+    updateCart();
+
+
+    alert(
+
+        "¡Compra realizada correctamente! 🎉\n\n" +
+
+        "Total pagado: S/ " +
+        total.toFixed(2) +
+
+        "\nSaldo restante: S/ " +
+        balance.toFixed(2)
+
+    );
+
+}
+
+
+/* =========================================
+   NOTIFICACIÓN
+========================================= */
+
+function showCartNotification(productName) {
+
+    const toast = document.createElement("div");
+
+    toast.innerHTML = `
+
+        <div
+        class="alert alert-success shadow-lg"
+        style="
+        position:fixed;
+        bottom:25px;
+        right:25px;
+        z-index:9999;
+        border-radius:12px;
+        ">
+
+        <i class="bi bi-check-circle-fill"></i>
+
+        ${productName} agregado al carrito.
+
+        </div>
+
+    `;
+
+
+    document.body.appendChild(toast);
+
+
+    setTimeout(() => {
+
+        toast.remove();
+
+    }, 2200);
+
+}
+
+
+/* =========================================
+   FORMULARIO
+========================================= */
+
+document
+.getElementById("contactForm")
+.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+
+    alert(
+        "¡Gracias por contactarnos! " +
+        "Tu mensaje ha sido enviado."
+    );
+
+
+    this.reset();
+
+});
+
+
+/* =========================================
+   INICIAR PÁGINA
+========================================= */
+
+updateBalance();
+
+updateCart();
+
+</script>
+
+
+</body>
+</html>
+```
